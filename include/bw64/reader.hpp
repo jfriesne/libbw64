@@ -218,7 +218,7 @@ namespace bw64 {
     /**
      * @brief Seek a frame position in the DataChunk
      */
-    void seek(int32_t offset, std::ios_base::seekdir way = std::ios::beg) {
+    void seek(int64_t offset, std::ios_base::seekdir way = std::ios::beg) {
       auto numberOfFramesInt = utils::safeCast<int64_t>(numberOfFrames());
 
       // where to seek relative to according to way
