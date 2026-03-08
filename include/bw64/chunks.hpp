@@ -125,7 +125,7 @@ namespace bw64 {
       formatTag_ = formatTag;
       channelCount_ = channels;
       sampleRate_ = sampleRate;
-      bitsPerSample_ = bitDepth;
+      bitsPerSample_ = (uint16_t) bitDepth;
       extraData_ = extraData;
 
       // validation
