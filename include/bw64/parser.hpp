@@ -214,11 +214,11 @@ namespace bw64 {
 
     std::map<uint32_t, uint64_t> table;
     for (uint32_t i = 0; i < tableLength; ++i) {
-      uint32_t id;
-      uint64_t size;
-      utils::readValue(stream, id);
-      utils::readValue(stream, size);
-      table[id] = size;
+      uint32_t readID;
+      uint64_t readSize;
+      utils::readValue(stream, readID);
+      utils::readValue(stream, readSize);
+      table[readID] = readSize;
     }
     // skip junk data
     stream.seekg(size - minSize, std::ios::cur);
